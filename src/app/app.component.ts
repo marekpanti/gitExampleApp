@@ -17,8 +17,6 @@ export class AppComponent implements OnInit {
     this.auth.user$.subscribe(user => console.log(user));
     this.auth.isAuthenticated$.subscribe(d => console.log(d));
   }
-  // https://api.github.com/search/users?q=location:bratislava
-  // https://api.github.com/search/users?q=location:bratislava&page=3
 
   getUsers() {
     return this.http.get('https://api.github.com/users');
