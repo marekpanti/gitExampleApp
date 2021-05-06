@@ -29,7 +29,6 @@ export interface ListInterface {
           return this.listService.getUsersByLocation(place, pagination).pipe(take(1)).subscribe(d => {
               this.list = d;
               this.placeTitle = this.place.value;
-              console.log(this.list);
           });
       }
   }

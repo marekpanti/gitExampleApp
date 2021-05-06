@@ -18,15 +18,11 @@ export class DetailComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.log(this.route);
-    console.log(this.route.snapshot.params.id);
     if (this.route.snapshot.params.id) {
-      console.log('v ife');
       this.listService
         .getUserById(this.route.snapshot.params.id)
         .subscribe((userDetail) => {
           this.isUser = true;
-          console.log(userDetail);
           this.userDetail = userDetail;
         });
     }
@@ -39,7 +35,6 @@ export class DetailComponent implements OnInit {
       .pipe(take(1))
       .subscribe((repo) => {
           this.repositaries = repo
-            console.log(this.repositaries)
         });
   }
 }

@@ -6,8 +6,9 @@
       <input matInput placeholder="Ex. Kosice" [formControl]="place" />
     </mat-form-field>
     <button mat-button (click)="getList(place.value, null)">Search</button>
+    <span>Results: {{ list?.total_count }}</span>
   </mat-card>
-  <span>Results: {{ list?.total_count }}</span>
+
   <mat-card class="item" *ngFor="let item of list?.items" [routerLink]="['/detail/' + item.id]">
     <img src="{{ item.avatar_url }}" />
     <span
