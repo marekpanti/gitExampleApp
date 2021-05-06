@@ -1,0 +1,24 @@
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 1rem 0;
+    background: #2a2a2a;
+
+    h1 {
+        font-weight: 400;
+        color: white;
+    }
+
+    .buttons {
+        button {
+            margin-right: 1rem;
+        }
+    }
+
+    .name {
+        color: white;
+        margin-right: 1rem;
+    }
+}

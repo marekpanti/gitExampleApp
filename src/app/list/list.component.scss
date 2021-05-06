@@ -1,0 +1,23 @@
+.content {
+  width: 70%;
+  max-width: 960px;
+  margin: 4rem auto;
+
+  .search-line {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  cursor: pointer;
+
+  img {
+    width: 100px;
+    border-radius: 15px;
+  }
+}

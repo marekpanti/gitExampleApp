@@ -1,0 +1,18 @@
+<div *ngIf="userDetail" class="user-detail">
+    <button mat-raised-button routerLink="/">back</button>
+    <h2>Welcome {{ userDetail.name }}</h2>
+    <img [src]="userDetail.avatar_url" />
+    <ul>
+      <li>Followers: {{ userDetail.followers }}</li>
+      <li>Location: {{ userDetail.location }}</li>
+      <li>Name: {{ userDetail.name }}</li>
+      <li *ngIf="userDetail.blog">
+        Blog: <a [href]="userDetail.blog">click here</a>
+      </li>
+      <li>Repos: {{ userDetail.public_repos }}</li>
+      <li>Following: {{ userDetail.following }}</li>
+      <li>Following: {{ userDetail.followers }}</li>
+    </ul>
+  </div>
+  <h2 *ngIf="!userDetail">Not existing user ID</h2>
+  

@@ -1,0 +1,20 @@
+<div class="content">
+  <mat-card class="search-line">
+    <h1>Searched (first results are from Bratislava): {{ placeTitle }}</h1>
+    <mat-form-field class="example-full-width">
+      <mat-label>Search for users by place</mat-label>
+      <input matInput placeholder="Ex. Kosice" [formControl]="place" />
+    </mat-form-field>
+    <button mat-button (click)="getList(place.value, null)">Search</button>
+  </mat-card>
+  <span>Results: {{ list?.total_count }}</span>
+  <mat-card class="item" *ngFor="let item of list?.items" [routerLink]="['/detail/' + item.id]">
+    <img src="{{ item.avatar_url }}" />
+    <span
+      >User name:
+      <strong>{{
+        item.login
+      }}</strong></span
+    >
+  </mat-card>
+</div>

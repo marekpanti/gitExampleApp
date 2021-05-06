@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  GITHUB_PRIVATE_KEY: './marekpantistest.2021-05-05.private-key.pem',
+  WEBHOOK_PROXY_URL: 'https://smee.io/TAwa6hNf7Vm5b8E4',
+  GITHUB_WEBHOOK_SECRET: '494d9fb0dc2a363baf71a5cb3dd0f0302d7f848f'
 };
 
 /*
@@ -14,3 +17,19 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+
+// const SmeeClient = require('smee-client')
+
+// const smee = new SmeeClient({
+//   source: 'https://smee.io/TAwa6hNf7Vm5b8E4',
+//   target: 'http://localhost:3000/events',
+//   logger: console
+// })
+
+// const events = smee.start()
+
+// // Stop forwarding events
+// events.close()
+
+// 494d9fb0dc2a363baf71a5cb3dd0f0302d7f848f secret

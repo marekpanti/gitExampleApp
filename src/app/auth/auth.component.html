@@ -1,0 +1,8 @@
+<header class="line">
+    <h1>Git App Example</h1>
+    <div class="buttons">
+        <a *ngIf="isSignedIn" class="name" routerLink="/self">{{ user.name }}</a>
+        <button *ngIf="!isSignedIn" mat-raised-button color="primary" (click)="auth.logIn()">Log in</button>
+        <button *ngIf="isSignedIn" mat-raised-button color="accent" (click)="auth.logOut()">Log Out</button>
+    </div>
+</header>
